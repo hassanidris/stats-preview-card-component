@@ -1,0 +1,189 @@
+/* ------------------- */
+/* Custom Properties   */
+/* ------------------- */
+:root {
+  /*  Primary Colors  */
+  --clr-veryDarkBlue: 233 47% 7%;
+  --clr-darkDesaturatedBlue: 244 38% 16%;
+  --clr-softViolet: 277 64% 61%;
+  /*  Neutral Colors  */
+  --clr-white: 0 0% 100%;
+  /*  font-size  */
+  --fs-500: 2.25rem;
+  --fs-400: 1.75rem;
+  --fs-300: 1.5rem;
+  --fs-200: .9375rem;
+  --fs-100: .75rem;
+  /*  font-weight  */
+  --fw-700: 700;
+  --fw-400: 400;
+  /*  font-family  */
+  --ff-inter: "Inter", sans-serif;
+  --ff-lexend-deca: "Lexend Deca", sans-serif;
+}
+
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+/*  Box sizing  */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*  Reset Margins  */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture,
+blockquote,
+pre {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  font-weight: 400;
+}
+
+ol, ul, a {
+  list-style: none;
+  text-decoration: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+/*  setup the body  */
+body {
+  font-family: var(--ff-inter);
+  font-size: var(--fs-200);
+  font-weight: var(--fw-400);
+  line-height: 1.5;
+  background: hsl(var(--clr-veryDarkBlue));
+  color: hsl(var(--clr-white));
+  min-height: 100vh;
+}
+
+/*  make images easier to work with  */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* ------------------- */
+/* Utility classes     */
+/* ------------------- */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2em;
+}
+
+.card {
+  background-color: hsl(var(--clr-darkDesaturatedBlue));
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5em;
+}
+.card__image {
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+  overflow: hidden;
+  mix-blend-mode: overlay;
+}
+.card__image--desktop {
+  display: none;
+}
+.card__image--mobile {
+  display: block;
+}
+.card__content {
+  padding: 2em;
+  text-align: center;
+}
+.card__content--title {
+  font-size: var(--fs-400);
+  font-weight: var(--fw-700);
+  line-height: 1.5;
+}
+.card__content--title span {
+  color: hsl(var(--clr-softViolet));
+}
+.card__content--desc {
+  color: hsl(var(--clr-white)/0.75);
+  margin: 2em 0;
+}
+
+.card-status {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+.card-status__item {
+  font-size: var(--fs-300);
+  font-weight: var(--fw-700);
+  text-align: center;
+}
+.card-status__item span {
+  display: block;
+  font-size: var(--fs-100);
+  font-weight: var(--fw-400);
+  color: hsl(var(--clr-white)/0.6);
+  text-transform: uppercase;
+}
+
+@media (min-width: 1000px) {
+  .card {
+    flex-direction: row;
+    border-radius: 0.5em;
+    width: 70%;
+    gap: 2em;
+  }
+  .card__image {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    order: 2;
+  }
+  .card__image--desktop {
+    display: block;
+  }
+  .card__image--mobile {
+    display: none;
+  }
+  .card__content {
+    text-align: left;
+    width: 55%;
+  }
+  .card__content--title {
+    font-size: var(--fs-500);
+  }
+
+  .card-status {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .card-status__item {
+    text-align: left;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
