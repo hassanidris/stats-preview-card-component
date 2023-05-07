@@ -91,7 +91,7 @@ picture {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 95vh;
   padding: 2em;
 }
 
@@ -176,7 +176,6 @@ picture {
   .card__content--title {
     font-size: var(--fs-500);
   }
-
   .card-status {
     flex-direction: row;
     justify-content: space-between;
@@ -184,6 +183,4 @@ picture {
   .card-status__item {
     text-align: left;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
